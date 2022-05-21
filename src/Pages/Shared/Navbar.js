@@ -12,7 +12,7 @@ const Navbar = ({ children }) => {
   const [admin] = useAdmin();
 
   return (
-    <div class='drawer  drawer-end' data-theme={dark ? "dark" : "light"}>
+    <div class='drawer mb-20 drawer-end' data-theme={dark ? "dark" : "light"}>
       <input id='my-drawer-3' type='checkbox' class='drawer-toggle' />
       <div class='drawer-content flex flex-col'>
         <div class='w-full navbar bg-base-100 fixed top-0 z-50 lg:px-20'>
@@ -82,8 +82,8 @@ const Navbar = ({ children }) => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/contact' className='rounded-lg'>
-                  Contact
+                <NavLink to='/blogs' className='rounded-lg'>
+                  Blogs
                 </NavLink>
               </li>
               <li>

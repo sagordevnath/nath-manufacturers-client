@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 
 const PrivateRoute = () => {
-    return (
-        <div>
-            <h1>Private Route</h1>
-        </div>
-    );
+  const location = useLocation();
+  const user = true;
+
+  if (!user) {
+    return <Navigate to='/login' state={{ from: location }} replace />;
+  }
+
+  return <Outlet />;
 };
 
 export default PrivateRoute;
