@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { NavLink } from "react-router-dom";
 
 import { useLocation } from "react-router-dom";
+import auth from "../../firebase.init";
 import useAdmin from "../../hooks/useAdmin";
 
 const Navbar = ({ children }) => {
@@ -9,7 +11,9 @@ const Navbar = ({ children }) => {
   const { pathname } = useLocation();
   console.log(pathname);
 
-  const [admin] = useAdmin();
+  const [user] = useAuthState(auth);
+
+  // const [admin] = useAdmin();
 
   return (
     <div class='drawer mb-20 drawer-end' data-theme={dark ? "dark" : "light"}>
@@ -64,7 +68,7 @@ const Navbar = ({ children }) => {
                   Home
                 </NavLink>
               </li>
-              {admin && (
+              {user && (
                 <li>
                   <NavLink to='/dashboard' className='rounded-lg'>
                     Dashboard
