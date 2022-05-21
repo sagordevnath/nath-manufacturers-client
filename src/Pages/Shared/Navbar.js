@@ -1,15 +1,15 @@
-
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-// import useAdmin from "../hooks/useAdmin";
+
 import { useLocation } from "react-router-dom";
+import useAdmin from "../../hooks/useAdmin";
 
 const Navbar = ({ children }) => {
   const [dark, setDark] = useState(false);
   const { pathname } = useLocation();
   console.log(pathname);
 
-//   const [admin] = useAdmin();
+  const [admin] = useAdmin();
 
   return (
     <div class='drawer  drawer-end' data-theme={dark ? "dark" : "light"}>
@@ -38,7 +38,7 @@ const Navbar = ({ children }) => {
               </svg>
             </label>
           )}
-          <div class='flex-1 px-2 mx-2 text-2xl'>Nath Manufacturing Ltd.</div>
+          <div class='flex-1 px-2 mx-2 text-2xl'>Nath Manufacturers Ltd.</div>
           <div class='flex-none lg:hidden'>
             <label for='my-drawer-3' class='btn btn-square btn-ghost'>
               <svg
@@ -64,7 +64,7 @@ const Navbar = ({ children }) => {
                   Home
                 </NavLink>
               </li>
-              { (
+              {admin && (
                 <li>
                   <NavLink to='/dashboard' className='rounded-lg'>
                     Dashboard
@@ -72,7 +72,7 @@ const Navbar = ({ children }) => {
                 </li>
               )}
               <li>
-                <NavLink to='/about' className='rounded-lg'>
+                <NavLink to='/blog' className='rounded-lg'>
                   About
                 </NavLink>
               </li>
