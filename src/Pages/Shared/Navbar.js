@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { NavLink } from "react-router-dom";
-
+import { signOut } from 'firebase/auth';
 import { useLocation } from "react-router-dom";
 import auth from "../../firebase.init";
-import useAdmin from "../../hooks/useAdmin";
+// import useAdmin from "../../hooks/useAdmin";
 
 const Navbar = ({ children }) => {
   const [dark, setDark] = useState(false);
   const { pathname } = useLocation();
 
   const [user] = useAuthState(auth);
+
+  const logOut = () => {
+    signOut(auth);
+    localStorage.removeItem('accessToken');
+};
 
   // const [admin] = useAdmin();
 
@@ -90,7 +95,7 @@ const Navbar = ({ children }) => {
                 </NavLink>
               </li>
               {
-              user ? <li><NavLink to='/login' className='rounded-lg'>Sign Out </NavLink></li>
+              user ? <li><button onClick={logOut} className='rounded-lg'>Sign Out </button></li>
                 :<li><NavLink to='/login' className='rounded-lg'>Login</NavLink></li>}
 
               <li class='dropdown dropdown-hover dropdown-end'>

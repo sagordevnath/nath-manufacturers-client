@@ -6,7 +6,7 @@ const Product = ({ product }) => {
   const navigate = useNavigate();
 
   const navigateToPurchase = id =>{
-        navigate(`/product/${id}`);
+        navigate(`/purchase/${id}`);
     }
   return (
     <div class="card w-96 bg-base-100 shadow-xl">

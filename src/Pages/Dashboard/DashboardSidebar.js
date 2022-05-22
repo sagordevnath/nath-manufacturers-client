@@ -13,10 +13,13 @@ const DashboardSidebar = ({ children }) => {
         <label for='my-drawer-2' class='drawer-overlay'></label>
         <ul class='menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content'>
           <li>
-            <NavLink to='/dashboard/add-service'>Add Service</NavLink>
+            <NavLink to='/dashboard/my-order'>My Order</NavLink>
           </li>
           <li>
-            <NavLink to='/dashboard/add-admin'>Add Admin</NavLink>
+            <NavLink to='/dashboard/add-review'>Add a Review</NavLink>
+          </li>
+          <li>
+            <NavLink to='/dashboard/my-profile'>My Profile</NavLink>
           </li>
         </ul>
       </div>
