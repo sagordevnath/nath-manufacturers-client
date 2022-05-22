@@ -6,11 +6,9 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Home from './Pages/Home/Home';
-import Product from './Pages/Home/Product';
 import Products from './Pages/Home/Products';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
-import ProductDetails from './Pages/Purchase/ProductDetails';
 import Purchase from './Pages/Purchase/Purchase';
 import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
@@ -34,7 +32,7 @@ function App() {
             
               
           <Route path='/dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-          <Route path='/purchase/:id' element={<PrivateRoute><ProductDetails /></PrivateRoute>} />
+          <Route path='/purchase/:id' element={<PrivateRoute><Purchase /></PrivateRoute>} />
           {/* <Route path = '/product/:id' element = {<Purchase />}></Route> */}
 
           

@@ -9,8 +9,7 @@ const Products = () => {
         headers:{
             'content-type': 'application/json'
         }
-    }).then(res => res.json()));
-    console.log(products)
+    }).then(res => res.json()));    
     if (isLoading) {
         return <Loading></Loading>
     }
