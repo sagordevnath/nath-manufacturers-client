@@ -1,9 +1,10 @@
 import React from 'react';
+import loading from '../../Assets/images/loading/loading.gif';
 
 const Loading = () => {
     return (
         <div>
-            <h1>This is Loading page</h1>
+            <img className='w-screen' src={loading} alt="" />
         </div>
     );
 };
