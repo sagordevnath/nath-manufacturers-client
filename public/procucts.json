@@ -3,42 +3,42 @@
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
         "img": "https://i.ibb.co/dGDkr4v/1.jpg",
-        "minimum-order-quantity": 100,
-        "available-quantity": 1000
+        "minimumOrderQuantity": 100,
+        "availableQuantity": 1000
     },
     {   "name": "WHEEL ALIGNMENT",
         "price": "100",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
         "img": "https://i.ibb.co/tY8dmnP/2.jpg",
-        "minimum-order-quantity": 100,
-        "available-quantity": 1000
+        "minimumOrderQuantity": 100,
+        "availableQuantity": 1000
     },
     {   "name": "OIL CHANGING",
         "price": "150",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
         "img": "https://i.ibb.co/Yh04YVw/3.jpg",
-        "minimum-order-quantity": 100,
-        "available-quantity": 1000
+        "minimumOrderQuantity": 100,
+        "availableQuantity": 1000
     },
     {   "name": "BRAKE REPARING",
         "price": "180",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
         "img": "https://i.ibb.co/ZX2Cbkn/4.jpg",
-        "minimum-order-quantity": 100,
-        "available-quantity": 1000
+        "minimumOrderQuantity": 100,
+        "availableQuantity": 1000
     },
     {   "name": "WASH AND GLASSING",
         "price": "100",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
         "img": "https://i.ibb.co/FgQ3jXp/5.jpg",
-        "minimum-order-quantity": 100,
-        "available-quantity": 1000
+        "mminimumOrderQuantity": 100,
+        "availableQuantity": 1000
     },
     {   "name": "COMPLETE ANALYSIS",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
         "img": "https://i.ibb.co/zJy5ZDd/6.jpg",
-        "minimum-order-quantity": 100,
-        "available-quantity": 1000
+        "minimumOrderQuantity": 100,
+        "availableQuantity": 1000
     }
 ]

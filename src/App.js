@@ -3,9 +3,11 @@ import PrivateRoute from './Authentication/PrivateRoute';
 import Blogs from './Pages/Blogs/Blogs';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Home from './Pages/Home/Home';
+import Product from './Pages/Home/Product';
 import Products from './Pages/Home/Products';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
+import Purchase from './Pages/Purchase/Purchase';
 import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
 import NotFound from './Pages/Shared/NotFound';
@@ -18,7 +20,7 @@ function App() {
         <Routes>
           {/* Public Route */}
           <Route path='/' element={<Home />} />
-          <Route path='/products' element={<Products />} />
+          <Route path='/products' element={<Products />} />          
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/blogs' element={<Blogs />} />
@@ -27,6 +29,7 @@ function App() {
         {/* Private Route */}
         <Route element={<PrivateRoute />}>
           <Route path='/dashboard' element={<Dashboard />} />
+          <Route path = '/product/:id' element = {<Purchase />}></Route>
         </Route>
 
         <Route path='/dashboard' element={<Dashboard />}>

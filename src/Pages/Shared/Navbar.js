@@ -9,7 +9,6 @@ import useAdmin from "../../hooks/useAdmin";
 const Navbar = ({ children }) => {
   const [dark, setDark] = useState(false);
   const { pathname } = useLocation();
-  console.log(pathname);
 
   const [user] = useAuthState(auth);
 
@@ -90,11 +89,9 @@ const Navbar = ({ children }) => {
                   Blogs
                 </NavLink>
               </li>
-              <li>
-                <NavLink to='/login' className='rounded-lg'>
-                  Login
-                </NavLink>
-              </li>
+              {
+              user ? <li><NavLink to='/login' className='rounded-lg'>Sign Out </NavLink></li>
+                :<li><NavLink to='/login' className='rounded-lg'>Login</NavLink></li>}
 
               <li class='dropdown dropdown-hover dropdown-end'>
                 <label
