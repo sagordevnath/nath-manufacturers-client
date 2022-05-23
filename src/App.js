@@ -17,7 +17,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import Navbar from './Pages/Shared/Navbar';
 
-function App() {
+function App() {  
+  
   return (
     <div>
       <Navbar>
@@ -51,7 +52,7 @@ function App() {
 
       </Navbar>
       <Footer></Footer>
-      <ToastContainer />
+      <ToastContainer />      
       
     </div>
   );

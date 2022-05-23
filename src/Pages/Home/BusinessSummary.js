@@ -1,9 +1,10 @@
 import React from 'react';
 
-const BusinessSummary = () => {
+const BusinessSummary = () => {    
     return (
         <div>
             <h1>This is Business summary page</h1>
+            
         </div>
     );
 };

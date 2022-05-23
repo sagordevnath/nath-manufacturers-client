@@ -46,7 +46,10 @@ const Purchase = () => {
         .then(data => {
             console.log(data);
             toast.success('Order placed successfully');
-
+            // empty input
+            event.target.orderQuantity.value = '';
+            event.target.address.value = '';
+            event.target.phone.value ='';
         })
     }
 
