@@ -33,7 +33,7 @@ function App() {
         {/* Private Route */}
             
               
-          <Route path='/dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+          {/* <Route path='/dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>} /> */}
           <Route path='/purchase/:id' element={<PrivateRoute><Purchase /></PrivateRoute>} />
           {/* <Route path = '/product/:id' element = {<Purchase />}></Route> */}
 
@@ -41,10 +41,8 @@ function App() {
           {/* <Route path = '/purchase' element = {<Purchase />}></Route> */}
         
 
-        <Route path='dashboard' element={<Dashboard />}>
-          {/* root/dashboard/add-admin */}
-          <Route path='my-order' element={<MyOrder />} />
-          {/* root/dashboard/add-service */}
+        <Route path='dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>}>          
+          <Route path='my-order' element={<MyOrder />} />          
           <Route path='add-review' element={<AddReview />} />
           <Route path='my-profile' element={<MyProfile />} />
         </Route>

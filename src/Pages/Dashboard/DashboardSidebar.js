@@ -1,14 +1,13 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const DashboardSidebar = ({ children }) => {
+const DashboardSidebar = () => {
   return (
     <div class='drawer drawer-mobile mt-16 bg-accent'>
       <input id='my-drawer-2' type='checkbox' class='drawer-toggle' />
       <div class='drawer-content flex flex-col items-center '>
         {/* <!-- Page content here --> */}
-        <h1 className='text-3xl text-primary font-bold'>Welcome to Dashboard</h1>
-        {children}
+        <h1 className='text-3xl text-primary font-bold'>Welcome to Dashboard</h1>        
       </div>
       <div class='drawer-side '>
         <label for='my-drawer-2' class='drawer-overlay'></label>
