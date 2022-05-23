@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import useProductDetail from '../../hooks/useProductDetails';
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from '../../firebase.init';
+import {toast} from 'react-toastify';
 
 const Purchase = () => {
     const {id} = useParams();
@@ -20,14 +21,7 @@ const Purchase = () => {
         }
     }
     const handleOrder = event => {
-        event.preventDefault();
-        const name = user.displayName;
-        const email = user.email;
-        const address = event.target.address.value;
-        const phone = event.target.phone.value;
-        const quantity = event.target.orderQuantity.value;
-
-        console.log(name, email, address, phone, quantity);
+        event.preventDefault();        
 
         const order = {
             orderId: _id,
@@ -41,6 +35,19 @@ const Purchase = () => {
             phone: event.target.phone.value,
 
         }
+
+        fetch('http://localhost:5000/order', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        }).then(res => res.json())
+        .then(data => {
+            console.log(data);
+            toast.success('Order placed successfully');
+
+        })
     }
 
     

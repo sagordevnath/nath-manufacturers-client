@@ -13,6 +13,8 @@ import Purchase from './Pages/Purchase/Purchase';
 import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
 import NotFound from './Pages/Shared/NotFound';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import Navbar from './Pages/Shared/Navbar';
 
 function App() {
@@ -51,6 +53,7 @@ function App() {
 
       </Navbar>
       <Footer></Footer>
+      <ToastContainer />
       
     </div>
   );
