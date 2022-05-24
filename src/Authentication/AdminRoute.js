@@ -1,16 +1,25 @@
+import { signOut } from "firebase/auth";
 import React from "react";
-import { Navigate, Outlet, useLocation } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Navigate, useLocation } from "react-router-dom";
+import auth from "../firebase.init";
 import useAdmin from "../hooks/useAdmin";
+import Loading from "../Pages/Shared/Loading";
 
-const AdminRoute = () => {
-//   const location = useLocation();
-  const [admin] = useAdmin();
+const AdminRoute = ({children}) => {
+  const [user, loading] = useAuthState(auth);
+  const [admin, adminLoading] = useAdmin(user);
+  const location = useLocation();
 
-  if (!admin) {
-    return <Navigate to='/' replace />;
+  if(loading || adminLoading){
+      return <Loading></Loading>
   }
 
-  return <Outlet />;
+  if(!user || !admin){
+      signOut(auth);
+      return <Navigate to="/login" state={{ from: location }} replace></Navigate>
+  }
+  return children;
 };
 
 export default AdminRoute;

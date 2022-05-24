@@ -15,6 +15,11 @@ import Navbar from './Pages/Shared/Navbar';
 import NotFound from './Pages/Shared/NotFound';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ManageProducts from './Pages/Dashboard/ManageProducts';
+import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import AdminRoute from './Authentication/AdminRoute';
+import AddProduct from './Pages/Dashboard/AddaProduct';
 // import Navbar from './Pages/Shared/Navbar';
 
 function App() {  
@@ -43,9 +48,17 @@ function App() {
         
 
         <Route path='dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>}>          
-          <Route path='my-order' element={<MyOrder />} />          
-          <Route path='add-review' element={<AddReview />} />
-          <Route path='my-profile' element={<MyProfile />} />
+          <Route index path='my-profile' element={<MyProfile />}></Route>
+          <Route path='my-order' element={<MyOrder />}></Route>          
+          <Route path='add-review' element={<AddReview />}></Route>
+          {/* <Route path='manage-all-orders' element={<AdminRoute><ManageAllOrders /></AdminRoute>}></Route>
+          <Route path='addProduct' element={<AdminRoute><AddProduct /></AdminRoute>}></Route>
+          <Route path='makeAdmin' element={<AdminRoute><MakeAdmin /></AdminRoute>}></Route>
+          <Route path='manageProducts' element={<AdminRoute><ManageProducts /></AdminRoute>}></Route> */}
+          <Route path='manage-all-orders' element={<ManageAllOrders />}></Route>
+          <Route path='addProduct' element={<AddProduct />}></Route>
+          <Route path='makeAdmin' element={<MakeAdmin />}></Route>
+          <Route path='manageProducts' element={<ManageProducts />}></Route>
         </Route>
         
         </Routes>

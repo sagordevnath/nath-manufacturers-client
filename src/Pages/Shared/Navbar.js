@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { NavLink } from "react-router-dom";
 import { signOut } from 'firebase/auth';
@@ -11,10 +11,11 @@ const Navbar = ({ children }) => {
   const { pathname } = useLocation();
 
   const [user] = useAuthState(auth);
-
+  
   const logOut = () => {
     signOut(auth);
-    localStorage.removeItem('accessToken');
+    localStorage.removeItem('accessToken');    
+    
 };
 
   // const [admin] = useAdmin();
@@ -103,18 +104,15 @@ const Navbar = ({ children }) => {
                   tabindex='0'
                   class='btn btn-primary btn-outline rounded-lg'
                 >
-                  BOOK NOW
+                  {user?.displayName}                  
                 </label>
                 <ul
                   tabindex='0'
                   class='dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52'
                 >
                   <li>
-                    <a>Item 1</a>
-                  </li>
-                  <li>
-                    <a>Item 2</a>
-                  </li>
+                    <h2>My Profile</h2>
+                  </li>                  
                 </ul>
               </li>
               <label class='swap swap-rotate'>

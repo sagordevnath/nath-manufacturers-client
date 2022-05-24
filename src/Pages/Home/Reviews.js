@@ -9,7 +9,8 @@ const Reviews = () => {
         headers:{
             'content-type': 'application/json'
         }
-    }).then(res => res.json()));    
+    }).then(res => res.json()));   
+    console.log(reviews) 
     if (isLoading) {
         return <Loading></Loading>
     }
