@@ -8,7 +8,7 @@ const BusinessSummary = () => {
             <h1>Try to understand user expectations</h1>
             <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-10' >
             <div class="card bg-base-100 shadow-xl">
-  <figure class="px-10 pt-10">
+  <figure class=" px-10 pt-10">
   
   </figure>
   <div class="card-body items-center text-center">

@@ -64,12 +64,7 @@ const AddReview = () => {
                         type="text" readOnly
                         placeholder={user.displayName}
                         className="input input-bordered w-full max-w-xs"
-                        {...register("name", {
-                            required: {
-                                value: true,
-                                message: 'Name is Required'
-                            }
-                        })}
+                        {...register("name")}
                     />
                     <label className="label">
                         {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
@@ -125,12 +120,7 @@ const AddReview = () => {
                     <input
                         type="file"
                         className="input input-bordered w-full max-w-xs"
-                        {...register("image", {
-                            required: {
-                                value: true,
-                                message: 'Image is Required'
-                            }
-                        })}
+                        {...register("image")}
                     />
                     <label className="label">
                         {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}

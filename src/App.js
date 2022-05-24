@@ -20,6 +20,7 @@ import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import AdminRoute from './Authentication/AdminRoute';
 import AddProduct from './Pages/Dashboard/AddaProduct';
+import Payment from './Pages/Dashboard/Payment';
 // import Navbar from './Pages/Shared/Navbar';
 
 function App() {  
@@ -49,7 +50,8 @@ function App() {
 
         <Route path='dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>}>          
           <Route index path='my-profile' element={<MyProfile />}></Route>
-          <Route path='my-order' element={<MyOrder />}></Route>          
+          <Route path='my-order' element={<MyOrder />}></Route> 
+          <Route path='payment/:id' element = {<Payment />}></Route>         
           <Route path='add-review' element={<AddReview />}></Route>
           {/* <Route path='manage-all-orders' element={<AdminRoute><ManageAllOrders /></AdminRoute>}></Route>
           <Route path='addProduct' element={<AdminRoute><AddProduct /></AdminRoute>}></Route>

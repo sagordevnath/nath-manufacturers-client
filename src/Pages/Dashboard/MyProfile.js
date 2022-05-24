@@ -20,7 +20,7 @@ const MyProfile = () => {
         }     
         
 
-        fetch(`http://localhost:5000/user?userEmail=${user.email}`, {
+        fetch(`http://localhost:5000/user/${user.email}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
