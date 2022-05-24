@@ -25,8 +25,8 @@ useEffect(() => {
     return (
         <div>
             <h1 className='text-2xl '>This is my order: {orders.length}</h1>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>
@@ -43,8 +43,8 @@ useEffect(() => {
                         {
                             orders.map((order, index) => <tr key={order._id}>
                                 <th>{index + 1}</th>
-                                <td><div class="avatar">
-                                <div class="w-8 rounded">
+                                <td><div className="avatar">
+                                <div className="w-8 rounded">
                                     <img src={order.img} alt={order.productName} />
                                 </div>
                             </div></td>
@@ -53,7 +53,7 @@ useEffect(() => {
                                 <td>{order.quantity}</td>
                                 <td>{user.displayName}</td>
                                 <td>
-                                <label onClick={() => setCancelingOrder(order)} for="delete-confirm-modal" class="btn btn-xs btn-error mr-5">Cancel</label>
+                                <label onClick={() => setCancelingOrder(order)} for="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Cancel</label>
                                     {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
                                     {(order.price && order.paid) && <div>
                                         <p><span className='text-success'>Paid</span></p>

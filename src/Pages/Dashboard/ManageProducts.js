@@ -29,8 +29,8 @@ useEffect(() => {
     return (
         <div>
             <h1 className='text-2xl '>This is my order: {products.length}</h1>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>
@@ -45,8 +45,8 @@ useEffect(() => {
                         {
                             products.map((product, index) => <tr key={product._id}>
                                 <th>{index + 1}</th>
-                                <td><div class="avatar">
-                                <div class="w-8 rounded">
+                                <td><div className="avatar">
+                                <div className="w-8 rounded">
                                     <img src={product.img} alt={product.name} />
                                 </div>
                             </div></td>
@@ -55,7 +55,7 @@ useEffect(() => {
                                 <td>{product.availableQuantity}</td>
                                 
                                 <td>
-                                <label onClick={() => setDeletingProduct(product)} for="delete-confirm-modal" class="btn btn-xs btn-error mr-5">Delete</label>
+                                <label onClick={() => setDeletingProduct(product)} for="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Delete</label>
                                     </td>
                             </tr>)
                         }

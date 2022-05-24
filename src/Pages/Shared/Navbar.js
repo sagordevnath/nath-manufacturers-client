@@ -21,19 +21,19 @@ const Navbar = ({ children }) => {
   // const [admin] = useAdmin();
 
   return (
-    <div class='drawer mb-20 drawer-end' data-theme={dark ? "dark" : "light"}>
-      <input id='my-drawer-3' type='checkbox' class='drawer-toggle' />
-      <div class='drawer-content flex flex-col'>
-        <div class='w-full navbar bg-base-100 fixed top-0 z-50 lg:px-20'>
+    <div className='drawer mb-20 drawer-end' data-theme={dark ? "dark" : "light"}>
+      <input id='my-drawer-3' type='checkbox' className='drawer-toggle' />
+      <div className='drawer-content flex flex-col'>
+        <div className='w-full navbar bg-base-100 fixed top-0 z-50 lg:px-20'>
           {pathname.includes("dashboard") && (
             <label
               tabindex='0'
               for='my-drawer-2'
-              class='btn btn-ghost lg:hidden '
+              className='btn btn-ghost lg:hidden '
             >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                class='h-5 w-5'
+                className='h-5 w-5'
                 fill='none'
                 viewBox='0 0 24 24'
                 stroke='currentColor'
@@ -47,14 +47,14 @@ const Navbar = ({ children }) => {
               </svg>
             </label>
           )}
-          <div class='flex-1 px-2 mx-2 text-2xl'>Nath Manufacturers Ltd.</div>
-          <div class='flex-none lg:hidden'>
-            <label for='my-drawer-3' class='btn btn-square btn-ghost'>
+          <div className='flex-1 px-2 mx-2 text-2xl'>Nath Manufacturers Ltd.</div>
+          <div className='flex-none lg:hidden'>
+            <label for='my-drawer-3' className='btn btn-square btn-ghost'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
                 viewBox='0 0 24 24'
-                class='inline-block w-6 h-6 stroke-current'
+                className='inline-block w-6 h-6 stroke-current'
               >
                 <path
                   stroke-linecap='round'
@@ -66,8 +66,8 @@ const Navbar = ({ children }) => {
             </label>
           </div>
 
-          <div class='flex-none hidden lg:block'>
-            <ul class='menu menu-horizontal gap-x-2'>
+          <div className='flex-none hidden lg:block'>
+            <ul className='menu menu-horizontal gap-x-2'>
               <li>
                 <NavLink to='/' className='rounded-lg'>
                   Home
@@ -99,27 +99,27 @@ const Navbar = ({ children }) => {
               user ? <li><button onClick={logOut} className='rounded-lg'>Sign Out </button></li>
                 :<li><NavLink to='/login' className='rounded-lg'>Login</NavLink></li>}
 
-              <li class='dropdown dropdown-hover dropdown-end'>
+              <li className='dropdown dropdown-hover dropdown-end'>
                 <label
                   tabindex='0'
-                  class='btn btn-primary btn-outline rounded-lg'
+                  className='btn btn-primary btn-outline rounded-lg'
                 >
                   {user?.displayName}                  
                 </label>
                 <ul
                   tabindex='0'
-                  class='dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52'
+                  className='dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52'
                 >
                   <li>
                     <h2>My Profile</h2>
                   </li>                  
                 </ul>
               </li>
-              <label class='swap swap-rotate'>
+              <label className='swap swap-rotate'>
                 <input type='checkbox' onClick={() => setDark(!dark)} />
 
                 <svg
-                  class='swap-on fill-current w-10 h-10'
+                  className='swap-on fill-current w-10 h-10'
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 24 24'
                 >
@@ -127,7 +127,7 @@ const Navbar = ({ children }) => {
                 </svg>
 
                 <svg
-                  class='swap-off fill-current w-10 h-10'
+                  className='swap-off fill-current w-10 h-10'
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 24 24'
                 >
@@ -139,9 +139,9 @@ const Navbar = ({ children }) => {
         </div>
         {children}
       </div>
-      <div class='drawer-side'>
-        <label for='my-drawer-3' class='drawer-overlay'></label>
-        <ul class='menu p-4 overflow-y-auto w-80 bg-base-100'>
+      <div className='drawer-side'>
+        <label for='my-drawer-3' className='drawer-overlay'></label>
+        <ul className='menu p-4 overflow-y-auto w-80 bg-base-100'>
           <li>
             <NavLink to='/' className='rounded-lg'>
               Home
@@ -169,10 +169,10 @@ const Navbar = ({ children }) => {
           </li>
           <div
             tabindex='0'
-            class='collapse collapse-arrow border border-base-300 bg-base-100 rounded-box'
+            className='collapse collapse-arrow border border-base-300 bg-base-100 rounded-box'
           >
-            <div class='collapse-title text-xl font-medium'>Book Now</div>
-            <div class='collapse-content'>
+            <div className='collapse-title text-xl font-medium'>Book Now</div>
+            <div className='collapse-content'>
               <li>
                 <NavLink to='/contact' className='rounded-lg'>
                   Quick book
