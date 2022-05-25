@@ -2,7 +2,7 @@ import React from 'react';
 
 const MakeStat = () => {
     return (
-        <div className='flex flex-cols'>
+        <div className='flex flex-col items-center sm:w-full h-100 mt-[-40px]'>
             <div class="stats shadow">
   
   <div class="stat">

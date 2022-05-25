@@ -5,14 +5,16 @@ import Introduction from './Introduction';
 import MakeStat from './MakeStat';
 import Products from './Products';
 import Reviews from './Reviews';
+import UpcomingProduct from './UpcomingProduct';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <MakeStat></MakeStat>
             <Introduction></Introduction>
+            <MakeStat></MakeStat>
             <Products></Products>
+            <UpcomingProduct></UpcomingProduct>
             <BusinessSummary></BusinessSummary>
             <Reviews></Reviews>
         </div>

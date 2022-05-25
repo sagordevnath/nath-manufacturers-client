@@ -1,9 +1,6 @@
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
 
 const Review = ({review}) => {
-    const [user] = useAuthState(auth);
     return (
         <div className="card lg:max-w-lg bg-base-100 shadow-xl">
             <div className="card-body">
@@ -15,7 +12,7 @@ const Review = ({review}) => {
                         </div>
                     </div>
                     <div>
-                        <h4 className='text-xl'>{user?.name}</h4>
+                        <h4 className='text-xl'>{review?.name}</h4>
                         <p>{review.location}</p>
                         <p>Ratings: {review.rating}</p>
                     </div>

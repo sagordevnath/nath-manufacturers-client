@@ -2,7 +2,7 @@ import React from 'react';
 
 const Introduction = () => {
     return (
-        <div class="hero min-h-80 bg-base-200">
+        <div class="hero max-h-70 bg-base-200">
   <div class="hero-content flex-col lg:flex-row">
     <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl" />
     <div>

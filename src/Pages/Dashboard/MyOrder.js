@@ -53,7 +53,8 @@ useEffect(() => {
                                 <td>{order.quantity}</td>
                                 <td>{user.displayName}</td>
                                 <td>
-                                <label onClick={() => setCancelingOrder(order)} for="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Cancel</label>
+                                {order.paid ?<label onClick={() => setCancelingOrder(order)} for="delete-confirm-modal" disabled className="btn btn-xs btn-error mr-5">Cancel</label>
+                                :<label onClick={() => setCancelingOrder(order)} for="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Cancel</label>}
                                     {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
                                     {(order.price && order.paid) && <div>
                                         <p><span className='text-success'>Paid</span></p>

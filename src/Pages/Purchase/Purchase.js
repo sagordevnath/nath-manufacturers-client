@@ -55,6 +55,7 @@ const Purchase = () => {
             body: JSON.stringify(order)
         }).then(res => res.json())
         .then(data => {
+            console.log(data)
             if(quantity > availableOrderQuantity || quantity < minimumQuantity){
                 toast.error('Quantity must be between ' + minimumQuantity + ' and ' + availableOrderQuantity);
                 

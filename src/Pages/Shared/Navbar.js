@@ -18,53 +18,11 @@ const Navbar = ({children}) => {
     
 };
 
-// const menuItems = <>
-//         <li><Link to="/">Home</Link></li>
-//         {
-//         user && <li><Link to="/dashboard">Dashboard</Link></li>
-//         }
-//         <li><Link to="/products">Products</Link></li>
-//         <li><Link to="/blogs">Blogs</Link></li>
-//         <li><Link to="/contact">Contact</Link></li>
-//         <li><Link to="/about">About</Link></li>
-//         <li>{!user ? 
-//       <Link to='/login'>Login</Link>
-//     : <button onClick={handleSignOut} className='btn btn-ghost'>Sign Out</button>}</li>
-//     </>
-
-  // const [admin] = useAdmin();
-
-  return (
-    <>
-{/* <div className="navbar bg-base-100">
-            <div className="navbar-start">
-                <div className="dropdown">
-                    <label tabIndex="0" className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                    </label>
-                    <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        {menuItems}
-                    </ul>
-                </div>
-                <a className="btn btn-ghost normal-case text-xl">Doctors Portal</a>
-            </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal p-0">
-                    {menuItems}
-                </ul>
-            </div>
-            <div className="navbar-end">
-                <label tabIndex="1" for="dashboard-sidebar" className="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </label>
-            </div>
-        </div> */}
-
-
-<div class='drawer drawer-end' data-theme={dark ? "dark" : "light"}>
+  return ( 
+  <div class='drawer drawer-end' data-theme={dark ? "dark" : "light"}>
       <input id='my-drawer-3' type='checkbox' class='drawer-toggle' />
       <div class='drawer-content flex flex-col'>
-        <div class='navbar bg-base-100 fixed top-0 z-50 lg:px-20'>
+        <div class='navbar bg-accent fixed top-0 z-50 lg:px-20'>
           {pathname.includes("dashboard") && (
             <label
               tabindex='0'
@@ -121,18 +79,18 @@ const Navbar = ({children}) => {
                 </li>
               )}
               <li>
-                <NavLink to='/blog' className='rounded-lg'>
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to='/services' className='rounded-lg'>
-                  Services
+                <NavLink to='/products' className='rounded-lg'>
+                  Parts
                 </NavLink>
               </li>
               <li>
                 <NavLink to='/blogs' className='rounded-lg'>
                   Blogs
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to='/myPortfolio' className='rounded-lg'>
+                  My Portfolio
                 </NavLink>
               </li>
               {
@@ -151,7 +109,7 @@ const Navbar = ({children}) => {
                   className='dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52'
                   >
                   <li>
-                    <h2>My Profile</h2>
+                    <NavLink to='/dashboard/my-profile'>My Profile</NavLink>
                   </li>                  
                 </ul>
               </li>
@@ -189,48 +147,41 @@ const Navbar = ({children}) => {
             </NavLink>
           </li>
           <li>
-            <NavLink to='/about' className='rounded-lg'>
-              About
+            <NavLink to='/dashboard' className='rounded-lg'>
+              Dashboard
             </NavLink>
           </li>
           <li>
-            <NavLink to='/services' className='rounded-lg'>
-              Services
+            <NavLink to='/products' className='rounded-lg'>
+              Parts
             </NavLink>
           </li>
           <li>
-            <NavLink to='/contact' className='rounded-lg'>
-              Contact
+            <NavLink to='/blogs' className='rounded-lg'>
+              Blogs
             </NavLink>
           </li>
-          <li>
-            <NavLink to='/login' className='rounded-lg'>
-              Login
-            </NavLink>
-          </li>
+          {
+              user ? <li><button onClick={logOut} className='rounded-lg'>Sign Out </button></li>
+                :<li><NavLink to='/login' className='rounded-lg'>Login</NavLink></li>}
           <div
             tabindex='0'
             className='collapse collapse-arrow border border-base-300 bg-base-100 rounded-box'
             >
-            <div className='collapse-title text-xl font-medium'>Book Now</div>
+            <div className='collapse-title text-xl font-medium'>{user?.displayName}</div>
             <div className='collapse-content'>
               <li>
-                <NavLink to='/contact' className='rounded-lg'>
-                  Quick book
+                <NavLink to='/dashboard/my-profile' className='rounded-lg'>
+                  My Profile
                 </NavLink>
-              </li>
-              <li>
-                <NavLink to='/login' className='rounded-lg'>
-                  Pre book
-                </NavLink>
-              </li>
+              </li>              
             </div>
           </div>
         </ul>
       </div>
       
     </div>
-            </>
+          
   );
 };
 

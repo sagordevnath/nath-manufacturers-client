@@ -21,6 +21,7 @@ import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import AdminRoute from './Authentication/AdminRoute';
 import AddProduct from './Pages/Dashboard/AddaProduct';
 import Payment from './Pages/Dashboard/Payment';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 // import Navbar from './Pages/Shared/Navbar';
 
 function App() {  
@@ -33,6 +34,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/products' element={<Products />} /> 
           <Route path='/blogs' element={<Blogs />} />          
+          <Route path='/myPortfolio' element={<MyPortfolio />} />          
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='*' element={<NotFound />} />

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {useAuthState} from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
-import Loading from '../Shared/Loading';
 import CancelConfirmModal from './CancelConfirmModal';
 
 const ManageAllOrders = () => {
@@ -22,6 +21,10 @@ useEffect(() => {
     .then(res => res.json())
     .then(data => setOrders(data))
 }, [user]);
+
+const shiftingOrder =() => {
+    toast.success('Order successfully Shifted')
+}
     return (
         <div>
             <h1 className='text-2xl '>This is my order: {orders.length}</h1>
@@ -52,7 +55,8 @@ useEffect(() => {
                                 <td>{order.quantity}</td>
                                 <td>{order.userName}</td>
                                 <td>
-                                <label onClick={() => setCancelingOrder(order)} for="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Cancel</label>
+                                {order.paid ?<label onClick={shiftingOrder} for="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Shift</label>
+                            :<label onClick={() => setCancelingOrder(order)} for="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Cancel</label>}
                                     </td>
                             </tr>)
                         }

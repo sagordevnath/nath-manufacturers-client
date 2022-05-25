@@ -9,7 +9,7 @@ const Dashboard = () => {
   const [admin] = useAdmin(user);
   
     return (
-      <div className='drawer drawer-mobile mt-16 bg-accent'>
+      <div className='drawer drawer-mobile mt-16 min-h-screen bg-accent'>
       <input id='my-drawer-2' type='checkbox' className='drawer-toggle' />
       <div className='drawer-content flex flex-col items-center '>
         {/* <!-- Page content here --> */}
