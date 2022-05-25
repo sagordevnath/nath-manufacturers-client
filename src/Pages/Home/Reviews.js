@@ -1,19 +1,38 @@
 import React from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
 import Review from './Review';
 
 const Reviews = () => {
-    const { data: reviews, isLoading } = useQuery('reviews', () => fetch('http://localhost:5000/review', {
-        method: 'GET',
-        headers:{
-            'content-type': 'application/json'
-        }
-    }).then(res => res.json()));   
-    console.log(reviews) 
-    if (isLoading) {
-        return <Loading></Loading>
-    }
+    const [reviews, setReviews] = useState([]);
+    // const { data: reviews, isLoading } = useQuery('reviews', () => fetch('http://localhost:5000/customer-review', {
+    //     method: 'GET',
+    //     headers:{
+    //         'content-type': 'application/json'
+    //     }
+    // }).then(res => res.json()));   
+    // console.log(reviews) 
+    // if (isLoading) {
+    //     return <Loading></Loading>
+    // }
+
+    useEffect(()=> {
+        fetch('http://localhost:5000/customer-review', {
+                    method: 'GET',
+                    headers: {
+                        'content-type': 'application/json',
+                    }
+                })
+                .then(res =>res.json())
+                .then(data =>{
+                    console.log(data)
+                    setReviews(data);
+                    // toast.success('Review added successfully');
+                    // reset();
+                })
+    }, [])
     return (
         <section className='my-28'>
         <div className='flex justify-between'>

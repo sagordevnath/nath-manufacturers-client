@@ -1,11 +1,9 @@
 import React from 'react';
-import ProductCarousel from './ProductCarousel';
 
-const Banner = () => {
+const Introduction = () => {
     return (
-      <>
-      <div class="hero min-h-screen bg-base-200">
-  <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="hero min-h-80 bg-base-200">
+  <div class="hero-content flex-col lg:flex-row">
     <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl" />
     <div>
       <h1 class="text-5xl font-bold">Box Office News!</h1>
@@ -14,11 +12,7 @@ const Banner = () => {
     </div>
   </div>
 </div>
-{/* <div className='mx-auto'>
-<ProductCarousel></ProductCarousel>
-</div> */}
-      </>
     );
 };
 
-export default Banner;
+export default Introduction;

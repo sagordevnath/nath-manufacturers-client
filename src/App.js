@@ -27,8 +27,8 @@ function App() {
   
   return (
     <div>
-      <Navbar>
-        <Routes>
+      <Navbar  className='max-w-7xl mx-auto'>
+      <Routes>
           {/* Public Route */}
           <Route path='/' element={<Home />} />
           <Route path='/products' element={<Products />} /> 
@@ -64,9 +64,10 @@ function App() {
         </Route>
         
         </Routes>
-
-      </Navbar>
+        
+      
       <Footer></Footer>
+      </Navbar>
       <ToastContainer />      
       
     </div>

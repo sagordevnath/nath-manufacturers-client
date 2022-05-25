@@ -32,7 +32,7 @@ const AddReview = () => {
                     img: img
                 }
                 
-                fetch('http://localhost:5000/review', {
+                fetch('http://localhost:5000/customer-review', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',
@@ -61,7 +61,7 @@ const AddReview = () => {
                         <span className="label-text">Name</span>
                     </label>
                     <input
-                        type="text" readOnly
+                        type="text" 
                         placeholder={user.displayName}
                         className="input input-bordered w-full max-w-xs"
                         {...register("name")}

@@ -1,5 +1,9 @@
-
 import React from 'react';
+import { FaFlagCheckered } from "react-icons/fa";
+import {  FaTv } from "react-icons/fa";
+import {  FaUsers } from "react-icons/fa";
+import {  FaRegThumbsUp } from "react-icons/fa";
+import './BusinessSummary.css';
 
 const BusinessSummary = () => {    
     return (
@@ -7,52 +11,42 @@ const BusinessSummary = () => {
             <h1>Millions Business Trust Us</h1>
             <h1>Try to understand user expectations</h1>
             <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-10' >
-            <div className="card bg-base-100 shadow-xl">
+            <div className="card bg-base-100">
   <figure className=" px-10 pt-10">
   
+ <FaFlagCheckered className='Icons' />
+
   </figure>
   <div className="card-body items-center text-center">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
+    <h2 className="card-title">86</h2>
+    <p>Countries</p>    
   </div>
 </div>
-<div className="card bg-base-100 shadow-xl">
+<div className="card bg-base-100">
   <figure className="px-10 pt-10">
-    <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" className="rounded-xl" />
+    <FaTv className='Icons' />
   </figure>
   <div className="card-body items-center text-center">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
+    <h2 className="card-title">600+</h2>
+    <p>Complete Project</p>    
   </div>
 </div>
-<div className="card bg-base-100 shadow-xl">
+<div className="card bg-base-100">
   <figure className="px-10 pt-10">
-    <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" className="rounded-xl" />
+  <FaUsers className='Icons' />
   </figure>
   <div className="card-body items-center text-center">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
+    <h2 className="card-title">273+</h2>
+    <p>Happy Clients</p>    
   </div>
 </div>
-<div className="card bg-base-100 shadow-xl">
+<div className="card bg-base-100">
   <figure className="px-10 pt-10">
-    <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" className="rounded-xl" />
+  <FaRegThumbsUp className='Icons' />
   </figure>
   <div className="card-body items-center text-center">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
+    <h2 className="card-title">630+</h2>
+    <p>Feedback</p>    
   </div>
 </div>
             </div>
