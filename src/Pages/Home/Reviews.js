@@ -7,7 +7,7 @@ import Review from './Review';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
-    // const { data: reviews, isLoading } = useQuery('reviews', () => fetch('http://localhost:5000/customer-review', {
+    // const { data: reviews, isLoading } = useQuery('reviews', () => fetch('https://intense-brook-66546.herokuapp.com/customer-review', {
     //     method: 'GET',
     //     headers:{
     //         'content-type': 'application/json'
@@ -19,7 +19,7 @@ const Reviews = () => {
     // }
 
     useEffect(()=> {
-        fetch('http://localhost:5000/customer-review', {
+        fetch('https://intense-brook-66546.herokuapp.com/customer-review', {
                     method: 'GET',
                     headers: {
                         'content-type': 'application/json',

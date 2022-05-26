@@ -4,7 +4,7 @@ const useProductDetail = id =>{
     const [product, setProduct] = useState({});
 
     useEffect( () =>{
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://intense-brook-66546.herokuapp.com/product/${id}`;
         console.log(url);
         fetch(url)
         .then(res=> res.json())

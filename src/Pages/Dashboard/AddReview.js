@@ -32,7 +32,7 @@ const AddReview = () => {
                     img: img
                 }
                 
-                fetch('http://localhost:5000/customer-review', {
+                fetch('https://intense-brook-66546.herokuapp.com/customer-review', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',

@@ -12,7 +12,7 @@ const [cancelingOrder, setCancelingOrder] =useState(null);
 
 
 useEffect(() => {
-    fetch(`http://localhost:5000/order?userEmail=${user.email}`, {
+    fetch(`https://intense-brook-66546.herokuapp.com/order?userEmail=${user.email}`, {
         method: 'GET',
         headers:{
             'content-type': 'application/json',
@@ -53,8 +53,8 @@ useEffect(() => {
                                 <td>{order.quantity}</td>
                                 <td>{user.displayName}</td>
                                 <td>
-                                {order.paid ?<label onClick={() => setCancelingOrder(order)} for="delete-confirm-modal" disabled className="btn btn-xs btn-error mr-5">Cancel</label>
-                                :<label onClick={() => setCancelingOrder(order)} for="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Cancel</label>}
+                                {order.paid ?<label onClick={() => setCancelingOrder(order)} htmlFor="delete-confirm-modal" disabled className="btn btn-xs btn-error mr-5">Cancel</label>
+                                :<label onClick={() => setCancelingOrder(order)} htmlFor="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Cancel</label>}
                                     {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
                                     {(order.price && order.paid) && <div>
                                         <p><span className='text-success'>Paid</span></p>

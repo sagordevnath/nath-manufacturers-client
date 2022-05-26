@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeletingConfirmModal = ({deletingProduct, setDeletingProduct, products, setProducts}) => {
     const {_id, name} = deletingProduct;
     const handleDelete = () => {
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://intense-brook-66546.herokuapp.com/product/${_id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -30,7 +30,7 @@ const DeletingConfirmModal = ({deletingProduct, setDeletingProduct, products, se
                     <p className="py-4">If you delete this product, you can't get it back!</p>
                     <div className="modal-action">
                     <button onClick={() => handleDelete()} className="btn btn-xs btn-error">Delete</button>
-                        <label for="delete-confirm-modal" className="btn btn-xs">Cancel</label>
+                        <label htmlFor="delete-confirm-modal" className="btn btn-xs">Cancel</label>
                     </div>
                 </div>
             </div>

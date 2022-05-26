@@ -13,7 +13,7 @@ const MyProfile = () => {
 
     const email = useParams();
 
-    const { data: userInfo, isLoading } = useQuery('users', () => fetch(`http://localhost:5000/user/${user.email}`, {
+    const { data: userInfo, isLoading } = useQuery('users', () => fetch(`https://intense-brook-66546.herokuapp.com/user/${user.email}`, {
         method: 'GET',
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -38,7 +38,7 @@ const MyProfile = () => {
         }     
         
 
-        fetch(`http://localhost:5000/user/${user.email}`, {
+        fetch(`https://intense-brook-66546.herokuapp.com/user/${user.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
@@ -73,7 +73,7 @@ const MyProfile = () => {
   </div></figure>
   <div className="card-actions justify-center">
                     <label
-                        htmlFor="booking-modal"                        
+                        htmlhtmlFor="booking-modal"                        
                         className="btn btn-sm btn-secondary text-white uppercase bg-gradient-to-r from-secondary to-primary"
                     >Update Profile</label>
                 </div>
@@ -81,7 +81,7 @@ const MyProfile = () => {
             <input type="checkbox" id="booking-modal" className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
-                    <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <label htmlhtmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="font-bold text-lg text-secondary">Update Form</h3>
                     <form onSubmit={handleUpdate} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
                         

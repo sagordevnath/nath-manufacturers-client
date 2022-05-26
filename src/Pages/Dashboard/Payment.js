@@ -13,7 +13,7 @@ const stripePromise = loadStripe('pk_test_51L0kN1Hscznr6ukitXCyQQF1VknaA0Jx0rHh6
 const Payment = () => {
     const { id } = useParams();
     // const [orders, setOrders] = useState([]);
-    const url = `http://localhost:5000/order/${id}`;
+    const url = `https://intense-brook-66546.herokuapp.com/order/${id}`;
 
     const { data: order, isLoading } = useQuery(['order', id], () => fetch(url, {
         method: 'GET',
@@ -24,7 +24,7 @@ const Payment = () => {
 
     const totalPrice = parseInt(order?.quantity * order?.price)
     // useEffect( () =>{
-    //     const url = `http://localhost:5000/order/${id}`;
+    //     const url = `https://intense-brook-66546.herokuapp.com/order/${id}`;
     //     console.log(url);
     //     fetch(url, {
     //         method: 'GET',

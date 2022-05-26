@@ -33,7 +33,7 @@ const AddProduct = () => {
                     img: img
                 }
                 
-                fetch('http://localhost:5000/product', {
+                fetch('https://intense-brook-66546.herokuapp.com/product', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',

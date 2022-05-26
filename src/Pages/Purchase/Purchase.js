@@ -47,7 +47,7 @@ const Purchase = () => {
 
         }
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://intense-brook-66546.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

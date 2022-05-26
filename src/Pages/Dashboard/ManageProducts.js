@@ -15,7 +15,7 @@ const [user] =useAuthState(auth);
 const [deletingProduct, setDeletingProduct] =useState(null);
 
 useEffect(() => {
-    fetch("http://localhost:5000/product", {
+    fetch("https://intense-brook-66546.herokuapp.com/product", {
         method: 'GET',
         headers:{
             'content-type': 'application/json',
@@ -55,7 +55,7 @@ useEffect(() => {
                                 <td>{product.availableQuantity}</td>
                                 
                                 <td>
-                                <label onClick={() => setDeletingProduct(product)} for="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Delete</label>
+                                <label onClick={() => setDeletingProduct(product)} htmlFor="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Delete</label>
                                     </td>
                             </tr>)
                         }

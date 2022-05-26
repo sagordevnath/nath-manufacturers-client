@@ -10,7 +10,7 @@ const DashboardSidebar = () => {
         <h1 className='text-3xl text-primary font-bold'>Welcome to Dashboard</h1>        
       </div>
       <div className='drawer-side '>
-        <label for='my-drawer-2' className='drawer-overlay'></label>
+        <label htmlFor='my-drawer-2' className='drawer-overlay'></label>
         <ul className='menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content'>
           <li>
             <NavLink to='/dashboard/my-order'>My Order</NavLink>

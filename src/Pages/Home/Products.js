@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import Product from './Product';
 
 const Products = () => {
-    const { data: products, isLoading } = useQuery('products', () => fetch('http://localhost:5000/product', {
+    const { data: products, isLoading } = useQuery('products', () => fetch('https://intense-brook-66546.herokuapp.com/product', {
         method: 'GET',
         headers:{
             'content-type': 'application/json'

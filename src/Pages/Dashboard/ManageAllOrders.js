@@ -11,7 +11,7 @@ const [cancelingOrder, setCancelingOrder] =useState(null);
 
 
 useEffect(() => {
-    fetch("http://localhost:5000/allOrder", {
+    fetch("https://intense-brook-66546.herokuapp.com/allOrder", {
         method: 'GET',
         headers:{
             'content-type': 'application/json',
@@ -55,8 +55,8 @@ const shiftingOrder =() => {
                                 <td>{order.quantity}</td>
                                 <td>{order.userName}</td>
                                 <td>
-                                {order.paid ?<label onClick={shiftingOrder} for="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Shift</label>
-                            :<label onClick={() => setCancelingOrder(order)} for="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Cancel</label>}
+                                {order.paid ?<label onClick={shiftingOrder} htmlFor="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Shift</label>
+                            :<label onClick={() => setCancelingOrder(order)} htmlFor="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Cancel</label>}
                                     </td>
                             </tr>)
                         }

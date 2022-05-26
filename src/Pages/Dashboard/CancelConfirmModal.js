@@ -5,7 +5,7 @@ const CancelConfirmModal = ({cancelingOrder, setCancelingOrder, orders, setOrder
     console.log(cancelingOrder);
     const {_id, productName} = cancelingOrder;
     const handleCancel = () => {
-        fetch(`http://localhost:5000/order/${_id}`, {
+        fetch(`https://intense-brook-66546.herokuapp.com/order/${_id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -31,7 +31,7 @@ const CancelConfirmModal = ({cancelingOrder, setCancelingOrder, orders, setOrder
                     <p className="py-4">If you cancelled this order, you can't get it back!</p>
                     <div className="modal-action">
                     <button onClick={() => handleCancel()} className="btn btn-xs btn-error">Delete</button>
-                        <label for="delete-confirm-modal" className="btn btn-xs">Cancel</label>
+                        <label htmlFor="delete-confirm-modal" className="btn btn-xs">Cancel</label>
                     </div>
                 </div>
             </div>
