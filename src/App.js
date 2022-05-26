@@ -18,13 +18,19 @@ import 'react-toastify/dist/ReactToastify.css';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
-import AdminRoute from './Authentication/AdminRoute';
 import AddProduct from './Pages/Dashboard/AddaProduct';
 import Payment from './Pages/Dashboard/Payment';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
-// import Navbar from './Pages/Shared/Navbar';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 function App() {  
+  useEffect(()=> {
+    AOS.init({
+      duration: 1500
+    });
+  },[])
   
   return (
     <div className='lg:w-full'>
@@ -39,35 +45,20 @@ function App() {
           <Route path='/signup' element={<SignUp />} />
           <Route path='*' element={<NotFound />} />
 
-        {/* Private Route */}
-            
-              
-          {/* <Route path='/dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>} /> */}
+        {/* Private Route */}      
           <Route path='/purchase/:id' element={<PrivateRoute><Purchase /></PrivateRoute>} />
-          {/* <Route path = '/product/:id' element = {<Purchase />}></Route> */}
-
-          
-          {/* <Route path = '/purchase' element = {<Purchase />}></Route> */}
         
-
-        <Route path='dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>}>          
-          <Route index path='my-profile' element={<MyProfile />}></Route>
-          <Route path='my-order' element={<MyOrder />}></Route> 
-          <Route path='payment/:id' element = {<Payment />}></Route>         
-          <Route path='add-review' element={<AddReview />}></Route>
-          {/* <Route path='manage-all-orders' element={<AdminRoute><ManageAllOrders /></AdminRoute>}></Route>
-          <Route path='addProduct' element={<AdminRoute><AddProduct /></AdminRoute>}></Route>
-          <Route path='makeAdmin' element={<AdminRoute><MakeAdmin /></AdminRoute>}></Route>
-          <Route path='manageProducts' element={<AdminRoute><ManageProducts /></AdminRoute>}></Route> */}
-          <Route path='manage-all-orders' element={<ManageAllOrders />}></Route>
-          <Route path='addProduct' element={<AddProduct />}></Route>
-          <Route path='makeAdmin' element={<MakeAdmin />}></Route>
-          <Route path='manageProducts' element={<ManageProducts />}></Route>
-        </Route>
-        
-        </Routes>
-        
-      
+          <Route path='dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>}>          
+            <Route index path='my-profile' element={<MyProfile />}></Route>
+            <Route path='my-order' element={<MyOrder />}></Route> 
+            <Route path='payment/:id' element = {<Payment />}></Route>         
+            <Route path='add-review' element={<AddReview />}></Route>            
+            <Route path='manage-all-orders' element={<ManageAllOrders />}></Route>
+            <Route path='addProduct' element={<AddProduct />}></Route>
+            <Route path='makeAdmin' element={<MakeAdmin />}></Route>
+            <Route path='manageProducts' element={<ManageProducts />}></Route>
+          </Route>        
+        </Routes>   
       <Footer></Footer>
       </Navbar>
       <ToastContainer />      

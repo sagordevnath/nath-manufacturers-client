@@ -4,7 +4,7 @@ const UpcomingProduct = () => {
     return (
         <div>
           <h1 className='text-2xl uppercase text-center text-primary font-bold'>Our Upcoming Parts</h1>
-          <div className='flex'>
+          <div className='grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-6'>
         <div className="card">
   <figure className="px-10 pt-10">
     <img src="https://i.ibb.co/nMtST2M/upcoming1-1.jpg" alt="Droon" className="rounded-xl" />

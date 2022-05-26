@@ -53,7 +53,7 @@ useEffect(() => {
                                 <td>{order.quantity}</td>
                                 <td>{user.displayName}</td>
                                 <td>
-                                {order.paid ?<label onClick={() => setCancelingOrder(order)} htmlFor="delete-confirm-modal" disabled className="btn btn-xs btn-error mr-5">Cancel</label>
+                                {order.paid ?<label onClick={() => setCancelingOrder(order)} htmlFor="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Pending</label>
                                 :<label onClick={() => setCancelingOrder(order)} htmlFor="delete-confirm-modal" className="btn btn-xs btn-error mr-5">Cancel</label>}
                                     {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
                                     {(order.price && order.paid) && <div>
@@ -72,7 +72,6 @@ useEffect(() => {
                 cancelingOrder={cancelingOrder}
                 setOrders={setOrders}
                 orders={orders}
-                // refetch={refetch}
                 setCancelingOrder={setCancelingOrder}
             ></CancelConfirmModal>}
         </div>

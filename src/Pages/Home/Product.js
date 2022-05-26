@@ -9,7 +9,7 @@ const Product = ({ product }) => {
         navigate(`/purchase/${id}`);
     }
   return (
-    <div className="card bg-green-200 shadow-2xl">
+    <div  className="card bg-green-200 shadow-2xl">
       <figure className="px-10 pt-10">
         <img
           src={img}

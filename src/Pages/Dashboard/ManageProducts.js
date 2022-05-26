@@ -1,11 +1,7 @@
 import React from 'react';
-import { useQuery } from 'react-query';
-import Loading from '../Shared/Loading';
 import {useAuthState} from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useState } from 'react';
-import CancelConfirmModal from './CancelConfirmModal';
 import { useEffect } from 'react';
 import DeletingConfirmModal from './DeletingConfirmModal';
 
@@ -28,7 +24,7 @@ useEffect(() => {
     
     return (
         <div>
-            <h1 className='text-2xl '>This is my order: {products.length}</h1>
+            <h1 className='text-2xl text-center my-5 '>Manage All Products: {products.length}</h1>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>

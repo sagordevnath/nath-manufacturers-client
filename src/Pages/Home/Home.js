@@ -2,7 +2,6 @@ import React from 'react';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
 import Introduction from './Introduction';
-import MakeStat from './MakeStat';
 import Products from './Products';
 import Reviews from './Reviews';
 import UpcomingProduct from './UpcomingProduct';
@@ -13,7 +12,6 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Products></Products>
-            <MakeStat></MakeStat>
             <Introduction></Introduction>
             <UpcomingProduct></UpcomingProduct>
             <BusinessSummary></BusinessSummary>

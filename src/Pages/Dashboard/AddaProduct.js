@@ -52,7 +52,7 @@ const AddProduct = () => {
         })
     }
     return (
-        <div className='card card-compact w-96 bg-base-100 shadow-xl text-center p-6'>
+        <div className='card card-compact   shadow-xl text-center p-6'>
             <h2 className="text-2xl text-center text-primary mb-3 font-bold">Add your Review</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
 

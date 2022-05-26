@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 const CheckoutForm = ({ order }) => {
     const stripe = useStripe();
@@ -93,7 +94,7 @@ const CheckoutForm = ({ order }) => {
             }).then(res=>res.json())
             .then(data => {
                 setProcessing(false);
-                console.log(data);
+                toast.success('Payment Successful!');
             })
 
         }
@@ -128,6 +129,7 @@ const CheckoutForm = ({ order }) => {
                 success && <div className='text-green-500'>
                     <p>{success}  </p>
                     <p>Your transaction Id: <span className="text-orange-500 font-bold">{transactionId}</span> </p>
+                    
                 </div>
             }
         </>

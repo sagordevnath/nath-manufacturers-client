@@ -58,7 +58,7 @@ const Purchase = () => {
             console.log(data)
             if(quantity > availableOrderQuantity || quantity < minimumQuantity){
                 toast.error('Quantity must be between ' + minimumQuantity + ' and ' + availableOrderQuantity);
-                
+                setDisabled(data);
             }
            else {
             toast.success('Order placed successfully');
@@ -70,10 +70,19 @@ const Purchase = () => {
         })
     }
 
-    
-
-
-
+    const handleQuantity = event => {
+        
+        const quantity = parseInt(event.target.orderQuantity.value);
+        const availableOrderQuantity = parseInt(availableQuantity);
+        const minimumQuantity = parseInt(minimumOrderQuantity)
+        if(quantity > availableOrderQuantity || quantity < minimumQuantity){
+            toast.error('Quantity must be between ' + minimumQuantity + ' and ' + availableOrderQuantity);
+            setDisabled(true);
+        }
+       else {
+        toast.success('Order placed successfully');
+       }
+    }
     return (
         <>
         <div className="hero min-h-screen min-w-screen bg-base-200 mt-10">
@@ -85,9 +94,9 @@ const Purchase = () => {
     <p>Email: <input type="email" placeholder={user.email} readOnly className="input input-bordered input-success w-full max-w-xs mb-2" /></p>
     <p>Address: <textarea type="text" name='address' placeholder="Type here" className="input input-bordered input-success w-full max-w-xs mb-2" /></p>
     <p>Phone: <input type="text" name='phone' placeholder="Type here" className="input input-bordered input-success w-full max-w-xs mb-2" /></p>
-    <p>Order Quantity: <input name='orderQuantity' type="text" placeholder="Type here" className="input input-bordered input-success w-full max-w-xs mb-2" />
+    <p>Order Quantity: <input onChange={()=>{handleQuantity()}} name='orderQuantity' type="text" placeholder="Type here" className="input input-bordered input-success w-full max-w-xs mb-2" />
     </p>
-    <input className="btn btn-secondary w-full max-w-xs"type="submit" value="Order Now" />
+    {disabled ? <input className="btn btn-secondary w-full max-w-xs"type="submit" disabled value="Order Now" />: <input className="btn btn-secondary w-full max-w-xs"type="submit" value="Order Now" />}
         </form>
     </div>
     <div>

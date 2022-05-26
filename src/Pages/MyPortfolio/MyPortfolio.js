@@ -12,7 +12,7 @@ const MyPortfolio = () => {
         <div className="hero min-h-screen">
           <div className="hero-content flex-col lg:flex-row">
             <img
-              src="https://api.lorem.space/image/movie?w=260&h=400"
+              src="https://i.ibb.co/G9nY4tb/MERN.jpg"
               className="max-w-sm rounded-lg shadow-2xl"
             />
             <div>
