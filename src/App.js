@@ -27,7 +27,7 @@ import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 function App() {  
   
   return (
-    <div>
+    <div className='lg:w-full'>
       <Navbar  className='max-w-7xl mx-auto'>
       <Routes>
           {/* Public Route */}

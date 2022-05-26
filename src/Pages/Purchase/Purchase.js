@@ -76,7 +76,7 @@ const Purchase = () => {
 
     return (
         <>
-        <div className="hero min-h-screen min-w-screen bg-base-200 mt-5">
+        <div className="hero min-h-screen min-w-screen bg-base-200 mt-10">
   <div className="hero-content flex-col lg:flex-row-reverse sm: flex-col-reverse">
     <div className='card card-compact w-96 bg-base-100 shadow-xl flex flex-col mt-8 p-10'>
         <form onSubmit={handleOrder}>
@@ -91,9 +91,9 @@ const Purchase = () => {
         </form>
     </div>
     <div>
-    <div className="card w-50 bg-base-100 shadow-xl">
-  <figure className="px-5 pt-5">
-    <img src={img} alt="Shoes" className="rounded-xl" />
+    <div className="card w-50 bg-base-100 shadow-xl mx-20">
+  <figure className="px-15 pt-15">
+    <img width='45%' src={img} alt="Shoes" className="rounded-xl" />
   </figure>
   <div className="card-body items-center text-center text-xl">
     <h2 className="card-title text-2xl">Name: {name}</h2>

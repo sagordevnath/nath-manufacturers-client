@@ -3,9 +3,11 @@ import React from "react";
 const MyPortfolio = () => {
   return (
     <div className="mt-20">
-      <h1>About Me</h1>
+      <div className= 'text-2xl uppercase text-center text-primary font-bold'>
+        <h1>About Me</h1>
       <h2>My simple portfolio</h2>
       <progress className="progress w-56"></progress>
+      </div>
       <div>
         <div className="hero min-h-screen">
           <div className="hero-content flex-col lg:flex-row">

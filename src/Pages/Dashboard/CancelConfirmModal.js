@@ -17,7 +17,6 @@ const CancelConfirmModal = ({cancelingOrder, setCancelingOrder, orders, setOrder
                 if (data.deletedCount) {
                     toast.success(`Order ${productName} is Canceled.`)
                     setCancelingOrder(null);
-                    // refetch();
                     setOrders(orders.filter(order => order._id !== _id));
                 }
             })

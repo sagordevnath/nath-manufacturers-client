@@ -6,6 +6,7 @@ import MakeStat from './MakeStat';
 import Products from './Products';
 import Reviews from './Reviews';
 import UpcomingProduct from './UpcomingProduct';
+import ConnectUs from './ConnectUs';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <Products></Products>
             <UpcomingProduct></UpcomingProduct>
             <BusinessSummary></BusinessSummary>
+            <ConnectUs></ConnectUs>
             <Reviews></Reviews>
         </div>
     );

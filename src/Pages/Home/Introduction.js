@@ -4,11 +4,12 @@ const Introduction = () => {
     return (
         <div className="hero max-h-70 bg-base-200">
   <div className="hero-content flex-col lg:flex-row">
-    <img src="https://api.lorem.space/image/movie?w=260&h=400" className="max-w-sm rounded-lg shadow-2xl" />
+    <img src="https://i.ibb.co/6XFDpsJ/front-snd.jpg" className="max-w-sm rounded-lg shadow-2xl" />
     <div>
-      <h1 className="text-5xl font-bold">Box Office News!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
+      <h1 className="text-5xl font-bold">We're Looking Forward To</h1>
+      <h1 className="text-5xl font-bold">Having You Again As Our Guest</h1>
+      <p className="py-6">We are made for goodness. We are made for love...We are made for all of the beautiful things that you and I know. We are made to tell the world that there are no outsiders...all are welcome. You are as welcome as the flowers in May.</p>
+      <button className="btn btn-primary">Happy Shopping</button>
     </div>
   </div>
 </div>

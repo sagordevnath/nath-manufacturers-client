@@ -1,23 +1,23 @@
 [
     {
-        "name": "Winson Herry",
-        "review": "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.",
+        "name": "Elon Musk",
+        "review": "You’ve got to start with customer experience and work back toward technology not the other way around.",
         "location": "california",
-        "img": "https://i.ibb.co/PTztK6h/care-giver2.jpg",
+        "img": "https://i.ibb.co/jg8DjCX/review1.jpg",
         "rating": "5"
     },
     {   
-        "name": "Winson Herry",
-        "review": "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.",
+        "name": "Bill Gates",
+        "review": "Great design will not sell an inferior product, but will enable a great product to achieve its potential.",
         "location": "california",
-        "img": "https://i.ibb.co/PTztK6h/care-giver2.jpg",
+        "img": "https://i.ibb.co/Lx5mG8H/review2.jpg",
         "rating": "5"
     },
     {
-        "name": "Winson Herry",
-        "review": "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.",
+        "name": "Steve Jobs",
+        "review": "Product management really is the fusion between technology, what engineers do and the business side.",
         "location": "california",
-        "img": "https://i.ibb.co/PTztK6h/care-giver2.jpg",
+        "img": "https://i.ibb.co/v3QwQ0Z/review3.jpg",
         "rating": "4.5"
     }
 ]
