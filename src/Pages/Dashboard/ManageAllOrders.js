@@ -27,7 +27,7 @@ const shiftingOrder =() => {
 }
     return (
         <div>
-            <h1 className='text-2xl '>This is my order: {orders.length}</h1>
+            <h1 className='text-2xl tex-center my-5 '>Manage All Orders: {orders.length}</h1>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>

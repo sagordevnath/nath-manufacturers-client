@@ -62,7 +62,7 @@ const MyProfile = () => {
         <h1 className="text-center text-3xl text-primary mb-10">My Profile</h1>
     {/* <div className="card lg:card-side bg-base-100 shadow-xl"> */}
         
-  <figure><div className="card-body">
+  <figure><div className="card-body shadow-xl ">
   <h1 className="card-title text-center text-3xl text-primary mb-6">Profile</h1>
     <h2 className="card-title">Name: {user.displayName}</h2>
     <p>Email: {user.email}</p>    
@@ -74,7 +74,7 @@ const MyProfile = () => {
   <div className="card-actions justify-center">
                     <label
                         htmlhtmlFor="booking-modal"                        
-                        className="btn btn-sm btn-secondary text-white uppercase bg-gradient-to-r from-secondary to-primary"
+                        className="btn btn-sm btn-secondary mt-5 text-white uppercase bg-gradient-to-r from-secondary to-primary"
                     >Update Profile</label>
                 </div>
                 <div>

@@ -1,8 +1,9 @@
 import React from 'react';
+import logo from '../../Assets/images/logo/logo.png';
 
 const MakeStat = () => {
     return (
-        <div className='flex flex-col items-center sm:w-full w-100 h-100 mt-[-20px]'>
+        <div className='flex flex-col items-center sm:hidden w-100 h-100 mt-[-10px]'>
             <div className="stats shadow">
   
   <div className="stat">
@@ -27,7 +28,7 @@ const MakeStat = () => {
     <div className="stat-figure text-secondary">
       <div className="avatar online">
         <div className="w-16 rounded-full">
-          <img src="https://api.lorem.space/image/face?w=128&h=128" />
+          <img src={logo} />
         </div>
       </div>
     </div>

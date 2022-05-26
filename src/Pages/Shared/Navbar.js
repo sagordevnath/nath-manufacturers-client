@@ -19,7 +19,7 @@ const Navbar = ({children}) => {
 };
 
   return ( 
-  <div className='drawer drawer-end w-screen' data-theme={dark ? "dark" : "light"}>
+  <div className='drawer drawer-end w-screen bg-green-200' data-theme={dark ? "dark" : "light"}>
       <input id='my-drawer-3' type='checkbox' className='drawer-toggle' />
       <div className='drawer-content flex flex-col'>
         <div className='navbar bg-accent fixed top-0 z-50 lg:px-20'>
@@ -45,7 +45,7 @@ const Navbar = ({children}) => {
               </svg>
             </label>
           )}
-          <div className='flex-1 px-2 mx-2 text-2xl'>Nath Manufacturers Ltd.</div>
+          <div className='flex-1 px-2 mx-2 text-2xl uppercase font-bold'>Nath Manufacturers Ltd.</div>
           <div className='flex-none lg:hidden'>
             <label htmlFor='my-drawer-3' className='btn btn-square btn-ghost'>
               <svg

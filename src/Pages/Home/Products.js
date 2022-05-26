@@ -14,9 +14,9 @@ const Products = () => {
         return <Loading></Loading>
     }
     return (
-        <div className='my-28 min-w-screen mx-auto'>
+        <div className='my-15 min-w-screen mx-10'>
             <div className='text-center'>
-                <h3 className='text-primary  text-xl font-bold uppercase'>Our Products</h3>
+                <h3 className='text-primary text-3xl font-bold uppercase my-10'>Our Products</h3>
             </div>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
