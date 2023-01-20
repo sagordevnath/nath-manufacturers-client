@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import useToken from '../../hooks/useToken';
+import "./Login.css";
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -45,20 +46,30 @@ const Login = () => {
     }
 
     return (
-        <div className='flex h-screen justify-center items-center mt-20'>
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <div className="card-body">
-                    <h2 className="text-center text-2xl font-bold">Login</h2>
+        <div className='flex h-screen justify-center items-center background-image'>
+
+            <div class="hero min-h-screen left-side">
+                <div class="hero-content flex-col lg:flex-row">
+                    <div>
+                        <h1 class="text-5xl font-bold">Bayond</h1>
+                        <p class="py-6">Log in to your account</p>
+                        <p class="py-6">Don't have an account?</p>
+                        <button class="btn btn-primary">Register now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div className="card shadow-xl">
+                    <div className="card-body">
+                    
                     <form onSubmit={handleSubmit(onSubmit)}>
 
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
+                        <div className="form-control">
+                            
                             <input
                                 type="email"
                                 placeholder="Your Email"
-                                className="input input-bordered w-full max-w-xs"
+                                className="input input-bordered "
                                 {...register("email", {
                                     required: {
                                         value: true,
@@ -75,14 +86,12 @@ const Login = () => {
                                 {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
                             </label>
                         </div>
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
+                        <div className="form-control w-full ">
+                            
                             <input
                                 type="password"
                                 placeholder="Password"
-                                className="input input-bordered w-full max-w-xs"
+                                className="input input-bordered "
                                 {...register("password", {
                                     required: {
                                         value: true,
@@ -101,7 +110,7 @@ const Login = () => {
                         </div>
 
                         {signInError}
-                        <input className='btn w-full max-w-xs text-white' type="submit" value="Login" />
+                        <input className='btn w-full max-w-xs text-white' type="submit" value="Login" /> <input className='btn w-full mr-0 max-w-xs text-white' type="submit" value="Forget Password" />
                     </form>
                     <p><small>New to Doctors Portal <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
                     <div className="divider">OR</div>
@@ -111,6 +120,12 @@ const Login = () => {
                     >Continue with Google</button>
                 </div>
             </div>
+    </div>
+  {/* </div>
+</div> */}
+
+
+            
         </div >
     );
 };

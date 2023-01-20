@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCarousel from './ProductCarousel';
+// import ProductCarousel from './ProductCarousel';
 import background from '../../Assets/images/front-back/front-back.jpg';
 import PrimaryButton from '../Shared/PrimaryButton';
 
@@ -9,7 +9,7 @@ const Banner = () => {
       <div style={{
         background:`url(${background})`}} className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row-reverse">
-    <img data-aos="zoom-in-up" src="https://i.ibb.co/r0prTfC/front-top-removebg-preview.png" className="max-w-lg lg:h-screen mt-10 rounded-lg" />
+    {/* <img data-aos="zoom-in-up" src="https://i.ibb.co/r0prTfC/front-top-removebg-preview.png" className="max-w-lg lg:h-screen mt-10 rounded-lg" /> */}
     <div>
       <h1 className="text-5xl font-bold uppercase text-white" data-aos='fade-right'
               data-aos-duration='1000'

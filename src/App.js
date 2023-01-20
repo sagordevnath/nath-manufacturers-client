@@ -34,20 +34,20 @@ function App() {
   
   return (
     <div className='lg:w-full'>
-      <Navbar  className='max-w-7xl mx-auto'>
+      {/* <Navbar  className='max-w-7xl mx-auto'> */}
       <Routes>
           {/* Public Route */}
-          <Route path='/' element={<Home />} />
-          <Route path='/products' element={<Products />} /> 
-          <Route path='/blogs' element={<Blogs />} />          
-          <Route path='/myPortfolio' element={<MyPortfolio />} />          
-          <Route path='/login' element={<Login />} />
+          {/* <Route path='/' element={<Home />} /> */}
+          {/* <Route path='/products' element={<Products />} />  */}
+          {/* <Route path='/blogs' element={<Blogs />} />           */}
+          <Route path='/' element={<Login />} />
+          {/* <Route path='/myPortfolio' element={<MyPortfolio />} />           */}
           <Route path='/signup' element={<SignUp />} />
           <Route path='*' element={<NotFound />} />
 
         {/* Private Route */}      
-          <Route path='/purchase/:id' element={<PrivateRoute><Purchase /></PrivateRoute>} />
-        
+          {/* <Route path='/purchase/:id' element={<PrivateRoute><Purchase /></PrivateRoute>} /> */}
+{/*         
           <Route path='dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>}>          
             <Route index path='my-profile' element={<MyProfile />}></Route>
             <Route path='my-order' element={<MyOrder />}></Route> 
@@ -57,10 +57,10 @@ function App() {
             <Route path='addProduct' element={<AddProduct />}></Route>
             <Route path='makeAdmin' element={<MakeAdmin />}></Route>
             <Route path='manageProducts' element={<ManageProducts />}></Route>
-          </Route>        
+          </Route>         */}
         </Routes>   
-      <Footer></Footer>
-      </Navbar>
+      {/* <Footer></Footer> */}
+      {/* </Navbar> */}
       <ToastContainer />      
       
     </div>

@@ -1,0 +1,13 @@
+.background-image {
+    background-image: url(../../Assets/images/front-back/background.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.left-side {
+    width: 40%;
+}
+
+.right-side {
+    width: 60%;
+}
